@@ -1,0 +1,5 @@
+<h1>This is the index page for Products</h1>
+
+<% @products.each do |p|%>
+    <p><%= link_to p.title, product_path(p)%></p>
+<% end %>

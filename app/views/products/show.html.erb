@@ -1,0 +1,13 @@
+<h1>single product information</h1>
+
+<div style="max-width: 400px";>
+    <h2><%= @product.title %></h2>
+    <span>Description:</span>
+    <p><%= @product.description %></p>
+    <span>Price : <%= number_to_currency(@product.price) %></span>
+    <div style="display:flex; flex-direction:row; justify-content:space-between">
+        <%= link_to "Edit", edit_product_path(@product)%>
+        <%= button_to "Delete", product_path(@product), mehtod: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}%>
+    </div>
+  
+</div>
